@@ -1,0 +1,34 @@
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.openqa.selenium: DEBUG
+    life.freebao.devops: DEBUG
+  file:
+    name: log/spring.log
+
+application:
+  webdriver:
+    baidu:
+      search.url: https://www.baidu.com
+      search.cron: 1 1 1 1 1 ? #remove line to disable task
+    router:
+      login.url: http://192.168.1.253
+      login.username: admin
+      login.password: admin
+      login.cron: 0 30 * 10 * ?
+      status.url: http://192.168.1.253
+      status.cron: 5 * * 10 * ?
+      information.url: http://192.168.1.253
+      information.text.cron: 25 * * 10 * ?
+      information.image.cron: 45 * * 10 * ?
+      reboot.url: http://192.168.1.253
+      reboot.normal.cron: 45 * * * * ?
+      reboot.abnormal.cron: 15 * * * * ?
+    screenshot.path: d:/tmp/router
+    browser:
+      name: chrome
+      options: --no-sandbox,--disable-gpu #--headless
+    timeout: 30
+  wecom:
+    router.token: 9d44e914-27d2-6161-1c46-79767ef6379c

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: serouter
+  profiles:
+    active: grid, dev
+  task:
+    execution:
+      thread-name-prefix: serouter-task-
+      pool.core-size: 2
+      pool.max-size: 50
+      pool.queue-capacity: 10000
+    scheduling:
+      thread-name-prefix: serouter-scheduling-
+      pool.size: 2

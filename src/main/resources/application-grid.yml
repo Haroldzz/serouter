@@ -1,0 +1,4 @@
+application:
+  webdriver:
+    selenium.grid.url: http://192.168.1.252:4444
+  browser: chrome
